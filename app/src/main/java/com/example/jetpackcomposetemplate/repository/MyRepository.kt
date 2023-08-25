@@ -4,18 +4,18 @@ import android.app.Application
 import com.example.jetpackcomposetemplate.network.APIService
 import javax.inject.Inject
 
-class AstronomyRepository @Inject constructor(
+class MyRepository @Inject constructor(
     private val application: Application,
     private val apiService: APIService,
 ) {
-    /* fun getAstronomy(
+    /* fun getMyFunction(
          query: String,
          dateTime: String,
      ) = channelFlow {
          send(RemoteResource.Loading)
          try {
              val response =
-                 apiService.getAstronomy(Constants.API_KEY, query, dateTime)
+                 apiService.getMyFunction(Constants.API_KEY, query, dateTime)
              send(RemoteResource.Success(response))
          } catch (e: Exception) {
              when (e) {

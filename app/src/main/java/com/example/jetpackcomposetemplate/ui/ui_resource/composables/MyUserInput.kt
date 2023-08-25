@@ -39,7 +39,7 @@ import ir.kaaveh.sdpcompose.ssp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RowScope.PWeatherUserInput(
+fun RowScope.MyUserInput(
     value: String,
     cityNameEmpty: Boolean = false,
     onValueChange: (String) -> Unit
@@ -89,7 +89,7 @@ fun RowScope.PWeatherUserInput(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RowScope.PWeatherUserInputTrailing(
+fun RowScope.MyUserInputTrailing(
     value: String,
     dateEmpty: Boolean,
     dateClicked: () -> Unit
@@ -148,7 +148,7 @@ fun RowScope.PWeatherUserInputTrailing(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ColumnScope.PWeatherUserInput(
+fun ColumnScope.MyUserInput(
     placeHolder: String,
     value: String,
     valueEmpty: Boolean = false,
@@ -208,7 +208,7 @@ fun ColumnScope.PWeatherUserInput(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ColumnScope.PWeatherUserInputTrailing(
+fun ColumnScope.MyUserInputTrailing(
     placeHolder: String,
     value: String,
     valueEmpty: Boolean = false,

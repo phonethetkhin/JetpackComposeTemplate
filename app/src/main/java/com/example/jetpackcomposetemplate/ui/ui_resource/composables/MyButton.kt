@@ -14,7 +14,7 @@ import ir.kaaveh.sdpcompose.ssp
 
 
 @Composable
-fun PWeatherButton(
+fun MyButton(
     text: String,
     textColor: Color,
     enable: Boolean = true,

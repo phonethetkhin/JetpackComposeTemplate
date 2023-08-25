@@ -5,14 +5,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
-import com.example.jetpackcomposetemplate.ui.theme.JetpackComposeTemplateTheme
 import com.example.jetpackcomposetemplate.ui.ui_resource.navigation.NavGraph
+import com.example.jetpackcomposetemplate.ui.ui_resource.theme.MyTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            JetpackComposeTemplateTheme {
+            MyTheme {
                 MainComposable()
             }
         }

@@ -2,33 +2,29 @@ package com.example.jetpackcomposetemplate.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
-import com.example.jetpackcomposetemplate.repository.AstronomyRepository
+import com.example.jetpackcomposetemplate.repository.MyRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class AstronomyViewModel @Inject constructor(
-    private val repository: AstronomyRepository,
+class MyViewModel @Inject constructor(
+    private val repository: MyRepository,
     private val application: Application,
 
     ) : ViewModel() {
     /* private val _uiStates = MutableStateFlow(AstronomyUIStates())
      val uiStates = _uiStates.asStateFlow()
 
-     fun cityNameEmpty() {
+     fun isUserInputEmpty() {
          _uiStates.update { it.copy(cityNameEmpty = true) }
      }
 
-     fun toggleCityName(cityName: String) {
+     fun toggleUserInputChanged(cityName: String) {
 
          _uiStates.update { it.copy(cityNameEmpty = false, cityName = cityName) }
      }
 
-     fun dateNameEmpty() {
-         _uiStates.update { it.copy(dateEmpty = true) }
-     }
-
-     fun setDate(date: String) {
+     fun setUserInputInstantly(date: String) {
          _uiStates.update { it.copy(dateEmpty = false, dateName = date) }
      }
 
@@ -36,12 +32,12 @@ class AstronomyViewModel @Inject constructor(
           _uiStates.update { it.copy(showAlertDialog = showDialog, clickedItem = clickedItem) }
       }*//*
 
-    fun getAstronomy(
+    fun getMyFunction(
         query: String,
         date: String,
     ) {
         _uiStates.update { it.copy(errorMessage = "", astronomyResponse = null) }
-        repository.getAstronomy(query, date).onEach { remoteResource ->
+        repository.getMyFunction(query, date).onEach { remoteResource ->
             when (remoteResource) {
                 is RemoteResource.Loading ->
                     _uiStates.update {
